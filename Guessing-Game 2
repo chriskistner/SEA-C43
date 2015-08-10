@@ -1,0 +1,198 @@
+<!DOCTYPE HTML>
+<html>	
+<head>
+	<title>The Man from Scene 24</title>
+	</head>
+	<style type="text/css">
+	body {
+		background:url(http://i.imgur.com/QBFAleH.jpg);
+	}
+	header {
+		height: 120px;
+		margin: 0px 10px 20px 10px;
+		padding: 5px 0px 0px 0px;
+		background-color: #003300;
+		border: 5px solid #ffffff;
+		border-bottom-left-radius: 15px;
+		border-bottom-right-radius: 15px;
+	}
+	header h1 {
+		text-align: center;
+		font-family: Tahoma;
+		color: #ffffff;
+	}
+	nav {
+		margin: 10px 0px 10px 0px;
+		background-color: #003300;
+		text-align: center;
+		left: 10%;
+	}
+	ul{
+    	list-style-type: none;
+    	margin: -10px;
+	}
+
+	li {
+    	display:inline;
+    	padding:5px 100px 5px 100px;
+    	border: 2px solid #ffffff;
+   	 font-family: Futura, Tahoma, sans-serif;
+    	color: #ffffff;
+    	border-radius: 5px 5px;
+    	background-color: #006666;
+	}
+	#content {
+	width: 500px;
+	float: center;
+	background-color: #ffffff;
+	margin: 10px 10px 10px 10px;
+	padding: 5px 5px 5px 5px;
+	border-bottom-right-radius: 15px;
+	border-top-right-radius: 15px;
+	background-color: #003300;
+	}
+	article {
+		border: 5px solid #ffffff;
+		margin: 10px 10px 10px 10px;
+		padding: 5px 5px 5px 5px;
+	}
+	footer {
+		height: 40px;
+		margin: 0px 10px 0px 10px;
+		padding: 0px 0px 5px 0px;
+		background-color: #003300;
+		border: 5px solid #ffffff;
+		border-top-left-radius: 15px;
+		border-top-right-radius: 15px;
+		clear: both;
+	}
+	footer p {
+		text-align: Center;
+
+	}
+	p {
+		color: #ffffff;
+		font-family: Tahoma, sans-serif;
+	}
+	h2 {
+		color: #ffffff;
+		font-family: Tahoma, sans-serif;
+	}
+	</style>
+	<body">
+		<header> 
+		<h1>Chris Kistner's Monty Python & the Bridge of Death Game</h1>
+<nav> 
+	<ul>
+		<li>About Me</li>
+		<li>About Monty Python</li>
+		<li>My Knights</li>
+		<li>Contact</li>
+
+	</header>
+<div id="content">
+	<article>
+		<h2> About My Game Monty Python Game
+		</br>Updated: 8/10/15 </h2>
+		<p> I've been trying to use javascript to create an interactive text-based advanture as you lead Arthur and his knights on his quest for the holy grail. This is actually really hard and I'm still getting the basics of Javascript down but I hope to have the whole quest programmed by the end of this course.</article>
+
+	<article>
+		<h2> Me and Monty Python over the Years
+			</br>Updated: 8/9/15 </h2>
+		<p> I've been a big Monty Python fan ever since I first watched flying circus when I was 10. Since then I've colletced their entire catalogue of works on DVD> I find British humor very appealing for some reason though It's very hard to explain to someone who's not into it why.</article>
+
+	<article>
+		<h2> My Career Goals 
+		</br>Updated: 8/8/15 </h2>
+		<p> I want to become a programmer because it's a challenge, I've been doing marketing and sales for over 10 years now and to be blunt, I'm bored. Looking forward to studying a subject matter that's going to kick me in the teeth and force me to focus every now and again.</article>
+
+		<article>
+		<h2> About Me! </br>Updated: 8/7/15 </h2>
+		<p> I've been a Seattle native since I was 1o years old. My family moved here from California in 1992. Since then I've lived in Maple Valley, Kent, Renton, Auburn, and Seattle at various points in my life. Never for too long, but always in King County. </article>
+</div>
+
+<footer>
+	<p> For more information about me and My Monty Pyhton game, Contact me!</p>
+</footer>
+		<script>
+		//Starting to start the Game
+		var arthurAnswer= Math.floor(Math.random() *7 + 1);
+		var robinAnswer = Math.floor(Math.random() * 5 + 1);
+		var benevierAnswer = Math.floor(Math.random() * 3 + 1);
+		var safeKnights = 0;
+		var liveKnights = 4;
+		while (safeKnights <3) {
+		var user = prompt("Arthur and his knights approach the approach the Bridge of Death that spans the ominous Gorge of Eternal peril. The Gorge is miles long and there is no other way across. You must get Arthur and at least two of his knights to the other side. Who do you send forward first? ARTHUR, LANCELOT, ROBIN, BENEVIER").toLowerCase();
+
+			switch(user) {
+    		case 'arthur':
+        		var knightName = prompt("What is your name?").toLowerCase();
+        		var arthurQuest = prompt("What is your quest?").toLowerCase();
+        		var arthurPuzzle = prompt("What, is the airspeed velocity of an unladen Swallow? 1-7 MPH");
+     				if (arthurPuzzle == arthurAnswer) {
+     				alert("Okay, " knightName " off you go then.");
+     				safeKnights ++;
+     				} else if(knightName == 'arthur' || arthurQuest == 'holy grail') {
+     				alert("WRONG, but since you're the king I'll let you go this time.");
+     				safeKnights ++;
+     				} else {
+     				alert("HAHA, into the Gorge with your ignorant arse, GAME OVER!");
+     				liveKnights --;
+     				}
+        	break;
+    		case 'lancelot':
+    		var knightName = prompt("What is your name?").toLowerCase();
+    		var lancelotQuest = prompt("What is your quest?").toLowerCase();
+    		var lancelotPuzzle = prompt("What, is your favorite color?")
+    			if (lancelotPuzzle == 'blue') {
+    			alert("Okay, " knightName " off you go!");
+    			safeKnights ++;
+    			} else {
+    			alert("Didn't you see the movie? Into the Gorge with you!");
+    			liveKnights: --;
+    			}
+
+            break;
+    		case 'robin':
+    		var knightName = prompt("What is your name?").toLowerCase();
+    		var robinQuest = prompt("What is your quest?").toLowerCase();
+    		var robinPuzzle = prompt("Is the length of my right toe in centimeters? 1-5");
+    			if (robinPuzzle == robinAnswer) {
+    			alert("Okay, " + knightName " off you go then.");
+    			safeKnights ++;
+    			} else {
+    			alert("HA, what a marroon. Into the Gorge!");
+    			liveKnights --;
+    			}
+
+         	break;
+    		case 'benevier':
+    		var knightName = prompt("What is your name?").toLowerCase();
+    		var benevierQuest = prompt("What is your quest?").toLowerCase();
+    		var benevierPuzzle = prompt("What, is the weight ratio difference between your average witch and a duck? 1-3")
+    			if (BenevierPuzzle == benevierAnswer) {
+    			alert("Okay whatever your name is, off you go.");
+    			safeKnights ++;
+    			} else {
+    			alert("What kind of name is Benevier anyways? Into the Gorge strange one!");
+    			liveKnights --;
+    			}
+    		
+			break;
+    		default:
+         	alert("Did you get banged on the head by a coconut? Who do you send forward first? ARTHUR, LANCELOT, ROBIN, BENEVIER").toLowerCase();
+		}
+		if (safeKnights > 3) {
+		alert:("Enough of Arthur and his knights have made it across the gorge. YOU WIN!!");
+		} else {
+		user;
+	}
+	if (liveKnights < 2) {
+	alert: ("Too many of Arthur and his gallant men are being tortured by the crazed weasels in the depths of the Gorge. Game Over!")
+}
+	}
+		</script>
+	</div>
+	</body>
+
+</html>
